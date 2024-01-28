@@ -1,0 +1,84 @@
+<!-- portfolio.html -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Calligraffitti&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Afacad&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playpen+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" href="assets/top_bar.png" type="image/x-icon">
+    <title>Mr Idea Man</title>
+    <link rel="stylesheet" href="/main.css" />
+    <link rel="stylesheet" href="/portfolio.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+    <%- include('header.ejs') %>
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+      <!-- Project 1 (Reversed Order) -->
+      <div class="project">
+        <div class="project-showcase">
+          <img src="assets/Child Safety.jpeg" alt="Project 1 Image" />
+        </div>
+        <div class="project-description">
+          <h3>Smart Wearable Device For Child Safety</h3>
+          <p>
+            Security is a major important criteria in various sectors and for
+            various situations. We constantly view and hear news about
+            children’s getting kidnaped, and are subjected to various
+            harassments. <br /><br />
+            So in-order to break the claim, we propose a system where the infant
+            is continuously monitored and the safety is ensured. The data’s are
+            constantly updated to the server and parents can monitor the child
+            using the child’s IOT credentials.<br />
+            <br />When the child wearable is out of range, then the alarm will
+            turn on notifying that the infant is in danger.
+          </p>
+        </div>
+      </div>
+
+      <div class="project">
+        <div class="project-showcase">
+          <img src="assets/NAA.jpeg" alt="Project 2 Image" />
+        </div>
+        <div class="project-description">
+          <h3>Nutrition Assistant Application</h3>
+          <p>
+            The Nutrition Assistant Application is a versatile tool that offers
+            personalized diet plans tailored to your dietary needs and
+            preferences.<br><br> It features a nutrient tracking system that allows you
+            to monitor your daily intake of essential nutrients. The application
+            also provides recipe suggestions, helping you discover new and
+            exciting meals that align with your diet and preferences.<br><br>
+            Additionally, it aids in grocery planning, enabling you to
+            efficiently plan your shopping based on your meal plans. This
+            comprehensive approach makes the Nutrition Assistant Application an
+            invaluable companion for maintaining a healthy lifestyle.
+          </p>
+        </div>
+      </div>
+      
+      <!-- Repeat the pattern for more projects with reversed order -->
+    </div>
+    <%- include('footer.ejs') %>
+    <script src="main.js"></script>
+  </body>9
+</html>

@@ -1,0 +1,349 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.logo-header {
+  display: flex;
+  align-items: center; /* Aligns the items vertically */
+}
+.logo {
+  height: 60px; /* Adjust as needed */
+  width: 60px; /* Adjust as needed */
+  border-radius: 60%; /* Makes the image round */
+  margin-right: 5px;
+  object-fit: cover; /* Ensures the image covers the entire area */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+h1 {
+  font-family: "Afacad", cursive;
+  margin: 10px;
+}
+
+h3 {
+  font-family: "Calligraffitti", cursive;
+  margin: 5px;
+}
+.projects-container p {
+  font-family: "Playpen Sans", serif;
+}
+
+/* Modes of Dark and Light */
+
+:root {
+  --color-bg-light: white;
+  --color-bg-dark: black;
+  --color-text-light: rgb(255, 255, 255);
+  --color-text-dark: rgb(0, 0, 0);
+}
+
+[data-theme="dark"] {
+  --color-bg: var(--color-bg-dark);
+  --color-text: var(--color-text-light);
+}
+[data-theme="light"] {
+  --color-bg: var(--color-bg-light);
+  --color-text: var(--color-text-dark);
+}
+
+body {
+  background: var(--color-bg); /* Use background instead of background-color */
+  color: var(--color-text);
+  transition: background-color 0.5s ease;
+}
+
+#theme-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: var(--color-bg); /* Use background instead of background-color */
+  border: none;
+  cursor: pointer;
+  z-index: 9999; /* Ensure it's above other elements */
+  transition: background-color 0.3s ease;
+}
+
+#theme-toggle:focus {
+  outline: none; /* Remove default focus outline */
+}
+
+#theme-icon {
+  height: 100%;
+  width: 100%;
+}
+[data-theme="dark"] .home-link, [data-theme="dark"] h3 ,[data-theme="dark"] contact-info a{
+  color: white;
+}
+[data-theme='dark'] .certificate p{
+  color: black;
+}
+
+.about {
+  text-decoration: none;
+  cursor: default;
+}
+.resume {
+  text-decoration: none;
+}
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
+  text-align: center;
+  font-family: "Afacad", cursive, sans-serif;
+  font-size: larger;
+}
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  text-align: center;
+  font-family: "Afacad", normal;
+  font-size: larger;
+}
+
+.menu-icon {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+.menu-icon div {
+  width: 2rem;
+  height: 0.25rem;
+  background: black;
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  margin: 15px;
+  padding: 10px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black; /* Set the color of the links */
+}
+
+h1 a {
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  text-decoration: none;
+}
+
+h2 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2em;
+
+  font-family: "Patrick Hand SC", cursive;
+}
+
+.certificates-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  justify-content: center;
+  margin: 70px;
+}
+.certificates-container a {
+  text-decoration: none;
+  color: black;
+}
+.certificates-container p{
+  text-align: center;
+  font-family: "Playpen Sans", serif;
+}
+
+.certificate {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+.certificate img {
+  max-width: 100%;
+  height: 80%;
+  border-radius: 5px;
+  object-fit:fill;
+}
+
+.certificate:hover {
+  transform: scale(1.05);
+}
+
+.certificate p{
+ margin: 40px;
+ font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+ font-size: 20px;
+}
+
+.contact-info {
+  width: 60%;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 2px;
+}
+
+.contact-info h2 {
+  text-align: center;
+  font-family: "Afacad", sans-serif;
+}
+
+.contact-info p {
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-family: "Birthstone", cursive;
+}
+.contact-info a {
+  text-decoration: none;
+  color: black;
+}
+
+.projects-container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.project {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.project-description,
+.project-showcase {
+  flex: 1;
+}
+
+.project-description {
+  padding: 0 20px; /* Add padding to increase the size of the description area */
+}
+
+.project-description p {
+  font-size: 16px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Adjust the line height as needed */
+}
+
+.project:nth-child(even) .project-description {
+  text-align: left;
+}
+
+.project:nth-child(odd) .project-showcase {
+  text-align: left;
+}
+
+.project img {
+  max-width: 70%;
+  min-width: 200px;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-showcase {
+  max-width: 400px;
+}
+
+.project-showcase img {
+  min-height: 300px; /* Adjust this value as needed */
+  width: 100%;
+  object-fit: fill;
+}
+
+/* CSS for screens smaller than 600px */
+@media only screen and (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+    width: 10px;
+  }
+  h3 {
+    font-size: 1em;
+  }
+  .profile {
+    font-size: 1em;
+    padding: 30px;
+  }
+  .menu {
+    display: none; /* Hide the menu by default */
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .menu-icon {
+    display: flex; /* Show the menu icon */
+  }
+  .menu-visible {
+    display: flex; /* Show the menu when the menu-visible class is added */
+  }
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: normal;
+}
+
+.cursor-follower {
+  width: 40px;
+  height: 40px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: normal;
+}
+
+
+/* body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+} */
