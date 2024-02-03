@@ -113,7 +113,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
   text-align: center;
   font-family: "Afacad", normal;
   font-size: larger;
@@ -168,7 +168,7 @@ h2 {
   grid-template-columns: repeat(2, 1fr);
   gap: 60px;
   justify-content: center;
-  margin: 70px;
+  margin: 100px;
 }
 .certificates-container a {
   text-decoration: none;
@@ -245,11 +245,11 @@ h2 {
 }
 
 .project-description {
-  padding: 0 20px; /* Add padding to increase the size of the description area */
+  padding: 0 11px; /* Add padding to increase the size of the description area */
 }
 
 .project-description p {
-  font-size: 16px; /* Adjust the font size as needed */
+  font-size: 14px; /* Adjust the font size as needed */
   line-height: 1.5; /* Adjust the line height as needed */
 }
 
