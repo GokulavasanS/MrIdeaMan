@@ -309,10 +309,11 @@ h2 {
   }
   .certificates-container {
     grid-template-columns: repeat(1, 1fr);
+    margin: 50px;
   }
   .certificate p{
     font-size: small;
-    margin: 10px;
+    margin: 15px;
   }
 }
 
